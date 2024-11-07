@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: We should always explore things that we are a little afraid of. --Andrea Ghez
 
 profile:
   align: right
