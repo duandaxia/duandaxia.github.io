@@ -2,96 +2,100 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Yufei Duan
     - name: Date of Birth
-      value: 14th March 1879
+      value: 12th March 1998
     - name: Languages
-      value: English, German
+      value: English, Chinese
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+    - title: Doctoral student in Computer Science
+      institution: KTH Royal Institute of Technology, Stockholm, Sweden 🇸🇪
+      year: Feb 2024 -
+ 
+    - title: M.Sc. in Mechanical Engineering
+      institution: ETH Zurich, Zurich, Switzerland 🇨🇭
+      year: Sep 2020 - Oct 2023
+      # description:
+      #   - Description 1.
+      #   - Description 2.
 
-- title: Experience
+    - title: B.E. in Mechanical Engineering
+      institution: The Hong Kong Polytechnic University, Hong Kong, China 🇭🇰
+      year: Sep 2016 - Jul 2020
+
+
+- title: Work Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+    - title: Thermal Design Tool Development Engineer, Internship
+      company: General Electric (Switzerland) GmbH, Baden, Switzerland 🇨🇭
+      year: Sep 2021 - Feb 2022
+      # description:
+      #   - Description 1.
+      #   - Description 2.
+      #   - title: Description 3.
+      #     contents:
+      #       - Sub-description 1.
+      #       - Sub-description 2.
+    - title: System Engineer, Internship
+      company: Bosch Automotive Products (Suzhou) Co., Ltd., Suzhou, China 🇨🇳
+      year: Jan 2021 - Apr 2021
+      # description:
+      #   - Description 1.
+      #   - Description 2.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+# - title: Research Experience
+#   type: time_table
+#   contents:
+#     - title: Research Assistant
+#       institution: ETH Zurich, Zurich, Switzerland 🇨🇭
+#       year: Feb 2021 - Aug 2021
+#       # description:
+#       #   - Description 1.
+#       #   - Description 2.
+#     - title: Research Assistant
+#       institution: The Hong Kong Polytechnic University, Hong Kong, China 🇭🇰
+#       year: Sep 2019 - Jul 2020
+#       # description:
+#       #   - Description 1.
+#       #   - Description 2.
 
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+# - title: Open Source Projects
+#   type: time_table
+#   contents:
+#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+#       year: 2015-now
+#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2022
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Swiss Robotics Masters Award
+    - year: 2021
       items:
-        - Max Planck Medal
+        - Winner - 2021 ETH Robotics Summer School Robot Competition
+    - year: 2020
+      items:
+        - The Hong Kong Polytechnic University Scholarship
+    - year: 2019
+      items:
+        - The Hong Kong Special Administrative Region Government Scholarship Fund Reaching Out Award
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Robotic Manipulation
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+        - Imitation learning
+        - Task and motion planning
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - Painting 🎨, Tennis 🎾, Violin 🎻, Dancing 💃
