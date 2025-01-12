@@ -31,7 +31,7 @@
   type: time_table
   contents:
     - title: Thermal Design Tool Development Engineer, Internship
-      company: General Electric (Switzerland) GmbH, Baden, Switzerland 🇨🇭
+      institution: General Electric (Switzerland) GmbH, Baden, Switzerland 🇨🇭
       year: Sep 2021 - Feb 2022
       # description:
       #   - Description 1.
@@ -41,7 +41,7 @@
       #       - Sub-description 1.
       #       - Sub-description 2.
     - title: System Engineer, Internship
-      company: Bosch Automotive Products (Suzhou) Co., Ltd., Suzhou, China 🇨🇳
+      institution: Bosch Automotive Products (Suzhou) Co., Ltd., Suzhou, China 🇨🇳
       year: Jan 2021 - Apr 2021
       # description:
       #   - Description 1.
