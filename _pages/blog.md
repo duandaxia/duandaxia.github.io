@@ -8,6 +8,7 @@ nav_order: 3
 ---
 
 {% assign personal_posts = site.posts | where: 'personal_blog', true %}
+
 <ul class="post-list list-unstyled">
   {% for post in personal_posts %}
     <li class="mb-5">

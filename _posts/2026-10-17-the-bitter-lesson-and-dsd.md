@@ -33,7 +33,7 @@ _styles: |
   @media (max-width: 575px) { .dsd-results { font-size: .75rem; } }
 ---
 
-<a href="{{ '/blog/' | relative_url }}">&larr; All posts</a>
+<a href="https://duandaxia.github.io/blog/">&larr; All posts</a>
 
 <div class="dsd-essay">
 <p>I first started questioning my understanding of The Bitter Lesson when I realized something:</p>
@@ -114,4 +114,4 @@ _styles: |
 </ol>
 </section>
 
-<a href="{{ "/blog/" | relative_url }}">&larr; All posts</a>
+<a href="https://duandaxia.github.io/blog/">&larr; All posts</a>
