@@ -14,8 +14,8 @@ layout: default
       </header>
       <div class="intro-bio">{{ content }}</div>
       <div class="intro-links">
-        <a class="research-link" href="{{ '/publications/' | relative_url }}">Explore my research <span aria-hidden="true">&nearr;</span></a>
-        <a href="mailto:{{ site.email }}">Get in touch <span aria-hidden="true">&nearr;</span></a>
+        <a class="research-link" href="{{ '/publications/' | relative_url }}">Explore my research <span aria-hidden="true">↗</span></a>
+        <a href="mailto:{{ site.email }}">Get in touch <span aria-hidden="true">↗</span></a>
       </div>
     </div>
     {% if page.profile %}
@@ -47,7 +47,7 @@ layout: default
           <p class="eyebrow">From the lab &amp; beyond</p>
           <h2 id="news-heading">News</h2>
         </div>
-        <a class="section-link" href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">&nearr;</span></a>
+        <a class="section-link" href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">↗</span></a>
       </div>
       {% include news.liquid limit=true %}
     </section>
@@ -60,7 +60,7 @@ layout: default
           <p class="eyebrow">Research</p>
           <h2 id="research-heading">Selected publications</h2>
         </div>
-        <a class="section-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">&nearr;</span></a>
+        <a class="section-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">↗</span></a>
       </div>
       {% include selected_papers.liquid %}
     </section>
@@ -73,7 +73,7 @@ layout: default
           <p class="eyebrow">Ideas &amp; reflections</p>
           <h2 id="writing-heading">Writing</h2>
         </div>
-        <a class="section-link" href="{{ '/blog/' | relative_url }}">Visit the blog <span aria-hidden="true">&nearr;</span></a>
+        <a class="section-link" href="{{ '/blog/' | relative_url }}">Visit the blog <span aria-hidden="true">↗</span></a>
       </div>
       {% assign personal_posts = site.posts | where: 'personal_blog', true %}
       {% for post in personal_posts limit: 3 %}
@@ -84,7 +84,7 @@ layout: default
               <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
             </h3>
             <p>{{ post.description }}</p>
-            <a class="text-link" href="{{ post.url | relative_url }}">Read the essay <span aria-hidden="true">&nearr;</span></a>
+            <a class="text-link" href="{{ post.url | relative_url }}">Read the essay <span aria-hidden="true">↗</span></a>
           </div>
         </article>
       {% endfor %}
