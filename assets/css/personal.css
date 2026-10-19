@@ -1,30 +1,28 @@
 /* A warm, editorial layer for the personal site. */
 :root {
-  --global-bg-color: #fffcf7;
+  --global-bg-color: #faf7f1;
   --global-text-color: #302c27;
   --global-text-color-light: #74685d;
-  --global-theme-color: #b34b2b;
-  --global-hover-color: #923a20;
-  --global-divider-color: #eddbcb;
-  --global-card-bg-color: #ffffff;
-  --global-code-bg-color: #fff0df;
-  --personal-accent: #d45e36;
-  --personal-surface: #fff0df;
-  --personal-nav: rgba(255, 252, 247, 0.96);
+  --global-theme-color: #9b482e;
+  --global-hover-color: #78331e;
+  --global-divider-color: #e3dacf;
+  --global-card-bg-color: #fffdf9;
+  --global-code-bg-color: #f0e9df;
+  --personal-surface: #f3ede3;
+  --personal-nav: rgba(250, 247, 241, 0.96);
 }
 
 html[data-theme="dark"] {
-  --global-bg-color: #2b231f;
-  --global-text-color: #fff3e7;
-  --global-text-color-light: #d0b9a5;
-  --global-theme-color: #ffb18b;
-  --global-hover-color: #ffd0ad;
-  --global-divider-color: #574237;
-  --global-card-bg-color: #352a23;
-  --global-code-bg-color: #3b2d25;
-  --personal-accent: #ffb18b;
-  --personal-surface: #3b2d25;
-  --personal-nav: rgba(43, 35, 31, 0.96);
+  --global-bg-color: #231e1b;
+  --global-text-color: #f2e8dd;
+  --global-text-color-light: #bcab9a;
+  --global-theme-color: #e7a280;
+  --global-hover-color: #f3bd9e;
+  --global-divider-color: #493d34;
+  --global-card-bg-color: #2c2520;
+  --global-code-bg-color: #302821;
+  --personal-surface: #302821;
+  --personal-nav: rgba(35, 30, 27, 0.96);
 }
 
 html {
@@ -79,7 +77,7 @@ button:focus-visible,
   border-radius: 3px;
 }
 ::selection {
-  background: #ffd9b8;
+  background: #e9c9ac;
   color: #302c27;
 }
 
@@ -167,7 +165,7 @@ button:focus-visible,
   line-height: 1.05;
 }
 .home-intro .post-title span {
-  color: var(--personal-accent);
+  color: var(--global-theme-color);
 }
 .intro-role {
   color: var(--global-text-color-light);
