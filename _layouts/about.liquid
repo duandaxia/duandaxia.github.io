@@ -4,7 +4,7 @@ layout: default
 <div class="post home-page">
   <section class="home-intro" aria-labelledby="intro-title">
     <div class="intro-copy">
-      <p class="eyebrow">Robotics &middot; Perception &middot; Learning</p>
+      <p class="eyebrow">Robotics &middot; Learning</p>
       <header class="post-header">
         <h1 class="post-title" id="intro-title">
           {{ site.first_name }}
@@ -53,19 +53,6 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.selected_papers %}
-    <section class="home-section home-research" aria-labelledby="research-heading">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Research</p>
-          <h2 id="research-heading">Selected publications</h2>
-        </div>
-        <a class="section-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">↗</span></a>
-      </div>
-      {% include selected_papers.liquid %}
-    </section>
-  {% endif %}
-
   {% if site.latest_posts.enabled %}
     <section class="home-section home-writing" aria-labelledby="writing-heading">
       <div class="section-heading">
@@ -88,6 +75,19 @@ layout: default
           </div>
         </article>
       {% endfor %}
+    </section>
+  {% endif %}
+
+  {% if page.selected_papers %}
+    <section class="home-section home-research" aria-labelledby="research-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Research</p>
+          <h2 id="research-heading">Selected publications</h2>
+        </div>
+        <a class="section-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">↗</span></a>
+      </div>
+      {% include selected_papers.liquid %}
     </section>
   {% endif %}
 
