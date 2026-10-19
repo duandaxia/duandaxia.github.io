@@ -1,6 +1,6 @@
 ---
 layout: page
-title: blog
+title: Blog
 permalink: /blog/
 description: Notes on robot learning, research, and the ideas behind the work.
 nav: true

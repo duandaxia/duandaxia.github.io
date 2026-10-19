@@ -1,0 +1,695 @@
+/* A warm, editorial layer for the personal site. */
+:root {
+  --global-bg-color: #faf7f1;
+  --global-text-color: #302c27;
+  --global-text-color-light: #74685d;
+  --global-theme-color: #9b482e;
+  --global-hover-color: #78331e;
+  --global-divider-color: #e3dacf;
+  --global-card-bg-color: #fffdf9;
+  --global-code-bg-color: #f0e9df;
+  --personal-surface: #f3ede3;
+  --personal-nav: rgba(250, 247, 241, 0.96);
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #231e1b;
+  --global-text-color: #f2e8dd;
+  --global-text-color-light: #bcab9a;
+  --global-theme-color: #e7a280;
+  --global-hover-color: #f3bd9e;
+  --global-divider-color: #493d34;
+  --global-card-bg-color: #2c2520;
+  --global-code-bg-color: #302821;
+  --personal-surface: #302821;
+  --personal-nav: rgba(35, 30, 27, 0.96);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+body.fixed-top-nav {
+  padding-top: 80px;
+}
+.container {
+  max-width: 1080px;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+body > .container[role="main"] {
+  margin-top: 3.5rem !important;
+}
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+h1 {
+  font-size: clamp(2.7rem, 5vw, 4rem);
+}
+h2 {
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+}
+h3 {
+  font-size: 1.65rem;
+}
+p {
+  margin-bottom: 1.2rem;
+}
+a {
+  text-underline-offset: 4px;
+}
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+::selection {
+  background: #e9c9ac;
+  color: #302c27;
+}
+
+#navbar {
+  min-height: 76px;
+  background: var(--personal-nav);
+  opacity: 1;
+  backdrop-filter: blur(12px);
+}
+#navbar .navbar-brand {
+  font:
+    1.35rem Georgia,
+    "Times New Roman",
+    serif;
+  letter-spacing: -0.03em;
+}
+#navbar .navbar-brand .font-weight-bold {
+  font-weight: 400 !important;
+}
+#navbar .nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 0.7rem;
+  text-transform: capitalize;
+}
+#navbar .nav-item.active > .nav-link {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+#navbar #search-toggle,
+#navbar #light-toggle {
+  width: 38px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+#navbar #search-toggle .nav-link {
+  padding: 0;
+}
+#navbar .toggle-container {
+  display: flex;
+  align-items: center;
+}
+#navbar #light-toggle i {
+  padding: 0;
+  font-size: 1.15rem;
+}
+#progress {
+  top: 75px;
+  height: 2px;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+}
+.post-title {
+  letter-spacing: -0.045em;
+}
+.post-header .desc {
+  color: var(--global-text-color-light);
+  margin-top: 1rem;
+  max-width: 46rem;
+}
+.eyebrow {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.68rem;
+  line-height: 1.5;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+  margin-bottom: 0.85rem;
+}
+.home-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 66px;
+  padding: 1rem 0 4rem;
+}
+.home-intro .post-title {
+  font-size: clamp(3.5rem, 7vw, 5.25rem);
+  margin: 0 0 0.8rem;
+  line-height: 1.05;
+}
+.home-intro .post-title span {
+  color: var(--global-theme-color);
+}
+.intro-role {
+  color: var(--global-text-color-light);
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+.intro-bio {
+  font-size: 0.94rem;
+  line-height: 1.85;
+}
+.intro-bio a {
+  text-decoration: underline;
+  text-decoration-color: var(--global-divider-color);
+}
+.intro-bio a:hover {
+  text-decoration-color: var(--global-theme-color);
+}
+.intro-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.75rem;
+  margin-top: 1.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.intro-links a {
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+.intro-links span,
+.section-link span,
+.text-link span {
+  color: inherit;
+  margin-left: 0.35rem;
+}
+.intro-portrait {
+  padding-top: 2.4rem;
+}
+.intro-portrait figure {
+  margin: 0;
+  padding: 9px;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 140px 140px 10px 10px;
+  background: var(--personal-surface);
+}
+.intro-portrait .portrait-image {
+  width: 100%;
+  border-radius: 130px 130px 5px 5px;
+  display: block;
+}
+.portrait-quote {
+  background: transparent;
+  border: 0;
+  padding: 1.5rem 0.35rem 0;
+  margin: 0;
+}
+.portrait-quote p {
+  font:
+    italic 1.12rem/1.55 Georgia,
+    "Times New Roman",
+    serif;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.6rem;
+}
+.portrait-quote cite {
+  font:
+    normal 0.7rem/1.5 -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+}
+
+.home-section {
+  border-top: 1px solid var(--global-divider-color);
+  padding: 3rem 0 3.5rem;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.section-heading .eyebrow {
+  margin-bottom: 0.55rem;
+}
+.section-heading h2 {
+  margin: 0;
+}
+.section-link {
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding-bottom: 0.25rem;
+}
+.home-news .news .table-responsive {
+  max-height: none !important;
+  overflow: visible;
+}
+.news table {
+  margin-bottom: 0;
+}
+.news table th,
+.news table td {
+  padding: 0.85rem 0;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  vertical-align: top;
+}
+.news table th {
+  width: 160px !important;
+  min-width: 160px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--global-text-color-light);
+  padding-right: 2rem;
+  white-space: nowrap;
+}
+.news table tr + tr {
+  border-top: 1px solid var(--global-divider-color);
+}
+.home-news .news table tr:first-child th {
+  color: var(--global-theme-color);
+  font-weight: 650;
+}
+
+.publications {
+  margin-top: 1.75rem;
+}
+.home-research .publications {
+  margin-top: 0;
+}
+.publications ol.bibliography {
+  margin-bottom: 0;
+}
+.publications ol.bibliography > li {
+  padding: 1.75rem 0;
+  margin: 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+.publications ol.bibliography > li:first-child {
+  padding-top: 0;
+}
+.publications ol.bibliography > li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.publications ol.bibliography > li > .row {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 30px;
+  margin: 0;
+  align-items: start;
+}
+.publications ol.bibliography > li > .row > div {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+.publications ol.bibliography li .abbr {
+  margin-bottom: 0;
+}
+.publications ol.bibliography li .abbr figure {
+  margin-bottom: 0;
+}
+.publications ol.bibliography li .preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+.publications ol.bibliography li .title {
+  font-size: 1.14rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.55rem;
+}
+.publications ol.bibliography li .author {
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+  line-height: 1.7;
+  margin-bottom: 0.25rem;
+}
+.publications ol.bibliography li .periodical {
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.6rem;
+}
+.publications ol.bibliography li .periodical em {
+  font-style: normal;
+  color: inherit;
+}
+.publications ol.bibliography li .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 0.85rem;
+}
+.publications ol.bibliography li .links a.btn {
+  margin: 0;
+  padding: 0.32rem 0.7rem;
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-card-bg-color);
+  border-radius: 5px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+.publications ol.bibliography li .links a.btn:hover {
+  color: var(--global-bg-color);
+  background: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+  text-decoration: none;
+}
+.publications h2.bibliography {
+  font-size: 1.6rem;
+  color: var(--global-text-color-light);
+  text-align: left;
+  margin-top: 2.5rem;
+}
+.publications ol.bibliography li .hidden.open {
+  margin-top: 1rem;
+}
+
+.writing-entry {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  padding: 1.6rem;
+  background: var(--personal-surface);
+  border-radius: 8px;
+}
+.writing-entry + .writing-entry {
+  margin-top: 1rem;
+}
+.writing-entry time {
+  color: var(--global-text-color-light);
+  font-size: 0.75rem;
+  padding-top: 0.35rem;
+}
+.writing-entry h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.65rem;
+}
+.writing-entry h3 a {
+  color: var(--global-text-color);
+}
+.writing-entry p {
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.8rem;
+}
+.text-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.home-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.75rem 0 1.5rem;
+  border-top: 1px solid var(--global-divider-color);
+  text-align: left;
+}
+.home-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+.home-contact p {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  margin: 0;
+}
+.home-contact .contact-icons {
+  display: flex;
+  gap: 1.15rem;
+  font-size: 1.65rem;
+}
+.home-contact .contact-icons a i::before {
+  color: var(--global-theme-color);
+}
+footer.sticky-bottom {
+  padding: 1.75rem 0;
+  margin-top: 3rem !important;
+  font-size: 0.68rem;
+  line-height: 1.8;
+  color: var(--global-text-color-light);
+}
+footer.sticky-bottom .container {
+  color: var(--global-text-color-light);
+  text-align: left;
+}
+.post-list li {
+  padding: 2rem 0;
+}
+.post-list h2 {
+  font-size: 2rem;
+}
+.post-meta,
+.post-tags {
+  color: var(--global-text-color-light);
+}
+
+@media (max-width: 991px) {
+  .home-intro {
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 36px;
+  }
+  .publications ol.bibliography > li > .row {
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  body > .container[role="main"] {
+    margin-top: 2rem !important;
+  }
+  .home-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+  }
+  .intro-copy {
+    display: contents;
+  }
+  .home-intro .eyebrow {
+    order: 0;
+    margin-bottom: -1rem;
+  }
+  .home-intro .post-header {
+    order: 1;
+    margin-bottom: 0;
+  }
+  .intro-portrait {
+    order: 2;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .intro-portrait figure {
+    width: 160px;
+    min-width: 160px;
+    padding: 6px;
+  }
+  .portrait-quote {
+    padding: 0;
+    max-width: 230px;
+  }
+  .portrait-quote p {
+    font-size: 1rem;
+  }
+  .intro-bio {
+    order: 3;
+  }
+  .intro-links {
+    order: 4;
+    margin-top: -1.5rem;
+  }
+  .home-section {
+    padding: 2.5rem 0;
+  }
+  .section-heading {
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  .section-heading h2 {
+    font-size: 1.85rem;
+  }
+  .section-link {
+    margin-top: 0.3rem;
+    font-size: 0.7rem;
+  }
+  .section-link span {
+    display: none;
+  }
+  .news table th {
+    min-width: 105px;
+    width: 105px !important;
+    padding-right: 1rem;
+    font-size: 0.68rem;
+  }
+  .news table td {
+    font-size: 0.83rem;
+  }
+  .publications ol.bibliography > li > .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.2rem;
+  }
+  .publications ol.bibliography li .abbr {
+    max-width: 280px !important;
+  }
+  .publications ol.bibliography li .title {
+    font-size: 1.08rem;
+  }
+  .writing-entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 1.25rem;
+  }
+  .writing-entry h3 {
+    font-size: 1.5rem;
+  }
+  .home-contact {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  #navbar .navbar-collapse {
+    padding: 0.75rem 0;
+  }
+  #navbar .navbar-nav {
+    align-items: flex-start;
+  }
+  #navbar .nav-link {
+    padding: 0.6rem 0;
+  }
+  #navbar .nav-item.active > .nav-link {
+    text-underline-offset: 5px;
+  }
+  #navbar #search-toggle,
+  #navbar #light-toggle {
+    width: 34px;
+    text-align: left;
+  }
+  .section-heading {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .section-link {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 359px) {
+  .container {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+  .intro-portrait {
+    gap: 16px;
+  }
+  .intro-portrait figure {
+    width: 130px;
+    min-width: 130px;
+  }
+  .portrait-quote p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+#navbar .nav-link[href$="/cv/"] {
+  text-transform: uppercase;
+}
+
+.post-description {
+  color: var(--global-text-color-light);
+  margin-top: 1rem;
+}
+#bibsearch {
+  width: 100%;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  font: inherit;
+}
+#bibsearch::placeholder {
+  color: var(--global-text-color-light);
+}
+.teaching-course {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--global-divider-color);
+}
+.teaching-course h2 {
+  margin: 0;
+  font-size: 1.85rem;
+}
+.course-years {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--global-theme-color);
+  font-weight: 600;
+}
+@media (max-width: 575px) {
+  .teaching-course {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+  .teaching-course h2 {
+    font-size: 1.6rem;
+  }
+}

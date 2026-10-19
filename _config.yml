@@ -48,13 +48,13 @@ rss_icon: true
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: true
 socials_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 930px
+max_width: 1080px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -112,8 +112,7 @@ x_username: # your X handle
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+contact_note: ""
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
