@@ -199,16 +199,16 @@ _styles: |
 </figure>
 <div class="dsd-rollouts">
 <figure>
-<video controls muted playsinline preload="metadata" width="640" height="688" poster="{{ '/assets/video/dsd-ablation/bin-avoiding-poster.png' | relative_url }}" aria-label="BIN obstacle-avoidance rollout ending in collision">
-<source src="{{ '/assets/video/dsd-ablation/bin-avoiding-collision.mp4' | relative_url }}" type="video/mp4">
-Your browser does not support embedded video. <a href="{{ '/assets/video/dsd-ablation/bin-avoiding-collision.mp4' | relative_url }}">Download the BIN rollout.</a>
+<video controls muted playsinline preload="metadata" width="640" height="688" poster="https://duandaxia.github.io/assets/video/dsd-ablation/bin-avoiding-poster.png" aria-label="BIN obstacle-avoidance rollout ending in collision">
+<source src="https://duandaxia.github.io/assets/video/dsd-ablation/bin-avoiding-collision.mp4" type="video/mp4">
+Your browser does not support embedded video. <a href="https://duandaxia.github.io/assets/video/dsd-ablation/bin-avoiding-collision.mp4">Download the BIN rollout.</a>
 </video>
 <figcaption><strong>BIN · collision</strong>D3IL Avoiding rollout. The overlay reports execution of 20 out of 20 predicted actions.</figcaption>
 </figure>
 <figure>
-<video controls muted playsinline preload="metadata" width="640" height="688" poster="{{ '/assets/video/dsd-ablation/dsd-avoiding-poster.png' | relative_url }}" aria-label="DSD obstacle-avoidance rollout completing the task">
-<source src="{{ '/assets/video/dsd-ablation/dsd-avoiding-success.mp4' | relative_url }}" type="video/mp4">
-Your browser does not support embedded video. <a href="{{ '/assets/video/dsd-ablation/dsd-avoiding-success.mp4' | relative_url }}">Download the DSD rollout.</a>
+<video controls muted playsinline preload="metadata" width="640" height="688" poster="https://duandaxia.github.io/assets/video/dsd-ablation/dsd-avoiding-poster.png" aria-label="DSD obstacle-avoidance rollout completing the task">
+<source src="https://duandaxia.github.io/assets/video/dsd-ablation/dsd-avoiding-success.mp4" type="video/mp4">
+Your browser does not support embedded video. <a href="https://duandaxia.github.io/assets/video/dsd-ablation/dsd-avoiding-success.mp4">Download the DSD rollout.</a>
 </video>
 <figcaption><strong>DSD · success</strong>D3IL Avoiding rollout. “DSN” in the video overlay refers to DSD.</figcaption>
 </figure>
